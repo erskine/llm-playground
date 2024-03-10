@@ -41,13 +41,19 @@
     // More info: https://containers.dev/implementors/json_reference/#port-attributes
     "portsAttributes": {
         "5000": {
-            "label": "Hello Remote World",
+            "label": "Flask API",
+            "requireLocalPort": true,
+            "onAutoForward": "openPreview"
+        },
+        "8501": {
+            "label": "Streamlit UI",
+            "requireLocalPort": true,
             "onAutoForward": "openPreview"
         }
     },
 
     // https://containers.dev/implementors/json_reference/#lifecycle-scripts
-    "postCreateCommand": "pip3 install -r requirements.txt",
-    "postAttachCommand": "python app/api.py"
+    "postCreateCommand": "pip3 install -r requirements.txt"
+    //"postAttachCommand": "python app/api.py"
 
 }

@@ -3,6 +3,12 @@ from llm import query
 
 app = Flask(__name__)
 
+
+@app.route('/')
+def index():
+    return "Hello World", 200
+
+
 # A route that accepts POST requests, and returns the sent data
 @app.route('/ask', methods=['POST'])
 def post_data():
