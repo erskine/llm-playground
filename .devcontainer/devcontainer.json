@@ -37,6 +37,8 @@
         }
     },
 
+    "forwardPorts": [5000, 8501],
+
     // Use 'portsAttributes' to set default properties for specific forwarded ports.
     // More info: https://containers.dev/implementors/json_reference/#port-attributes
     "portsAttributes": {
@@ -48,7 +50,7 @@
         "8501": {
             "label": "Streamlit UI",
             "requireLocalPort": true,
-            "onAutoForward": "openPreview"
+            "onAutoForward": "openBrowser"
         }
     },
 
