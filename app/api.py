@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Hello World", 200
+    return "Welcome to Flask", 200
 
 
 # A route that accepts POST requests, and returns the sent data
