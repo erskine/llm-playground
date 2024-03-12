@@ -1,9 +1,10 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
-    "name": "Python 3",
+    "name": "Python",
     // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-    "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+    //"image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+    "image": "python:3.12.2-bookworm",
 
     // Features to add to the dev container. More info: https://containers.dev/features.
     // "features": {},
@@ -57,6 +58,6 @@
 
     // https://containers.dev/implementors/json_reference/#lifecycle-scripts
     "postCreateCommand": "pip3 install -r requirements.txt"
-    //"postAttachCommand": "python app/api.py"
+    //"postAttachCommand": "streamlit run app/ui.py"
 
 }
